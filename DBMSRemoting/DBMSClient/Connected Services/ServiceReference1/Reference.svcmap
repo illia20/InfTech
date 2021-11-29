@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7d2fa6c8-25e6-4094-b1b9-d19231daa7a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/DBMSRemoting/DBMSService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="32f20889-1f76-47ab-8e16-5c4ffa2bf007" SourceId="1" SourceUrl="http://localhost:8000/DBMSRemoting/DBMSService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="514cbfa4-db4e-40ea-93cf-13efc63f42cc" SourceId="1" SourceUrl="http://localhost:8000/DBMSRemoting/DBMSService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="10fdfce3-9948-4e43-8ae9-23b778a80017" SourceId="1" SourceUrl="http://localhost:8000/DBMSRemoting/DBMSService/mex" />
+    <MetadataFile FileName="DBMS.Core.xsd" MetadataType="Schema" ID="7afed8af-0eda-4ef3-8787-71c7f30ba7b9" SourceId="1" SourceUrl="http://localhost:8000/DBMSRemoting/DBMSService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="035dccc0-db61-4f11-ba58-86fc65decd80" SourceId="1" SourceUrl="http://localhost:8000/DBMSRemoting/DBMSService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DBMSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/DBMS.Core" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDBMSService_CreateDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_CreateDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddEmptyTableWithName_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmptyTableWithName" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddEmptyTableWithName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmptyTableWithNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTable" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_GetTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTable" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_GetTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddColumn_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddColumn" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddColumn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRow" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_AddRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_ChangeValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeValue" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_ChangeValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRow" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteColumn_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColumn" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteColumn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTable" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_DeleteTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_SaveCurrentDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCurrentDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_SaveCurrentDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCurrentDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_LoadDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_LoadDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_GetTablesNameList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTablesNameList" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_GetTablesNameList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTablesNameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_CartesianProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:CartesianProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDBMSService_CartesianProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CartesianProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDBMSService">
+    <wsdl:operation name="CreateDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/CreateDatabase" message="tns:IDBMSService_CreateDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/CreateDatabaseResponse" message="tns:IDBMSService_CreateDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmptyTableWithName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/AddEmptyTableWithName" message="tns:IDBMSService_AddEmptyTableWithName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/AddEmptyTableWithNameResponse" message="tns:IDBMSService_AddEmptyTableWithName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/AddTable" message="tns:IDBMSService_AddTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/AddTableResponse" message="tns:IDBMSService_AddTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/GetTable" message="tns:IDBMSService_GetTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/GetTableResponse" message="tns:IDBMSService_GetTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddColumn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/AddColumn" message="tns:IDBMSService_AddColumn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/AddColumnResponse" message="tns:IDBMSService_AddColumn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/AddRow" message="tns:IDBMSService_AddRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/AddRowResponse" message="tns:IDBMSService_AddRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/ChangeValue" message="tns:IDBMSService_ChangeValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/ChangeValueResponse" message="tns:IDBMSService_ChangeValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/DeleteRow" message="tns:IDBMSService_DeleteRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/DeleteRowResponse" message="tns:IDBMSService_DeleteRow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColumn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/DeleteColumn" message="tns:IDBMSService_DeleteColumn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/DeleteColumnResponse" message="tns:IDBMSService_DeleteColumn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/DeleteTable" message="tns:IDBMSService_DeleteTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/DeleteTableResponse" message="tns:IDBMSService_DeleteTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/SaveCurrentDatabase" message="tns:IDBMSService_SaveCurrentDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/SaveCurrentDatabaseResponse" message="tns:IDBMSService_SaveCurrentDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/LoadDatabase" message="tns:IDBMSService_LoadDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/LoadDatabaseResponse" message="tns:IDBMSService_LoadDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesNameList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/GetTablesNameList" message="tns:IDBMSService_GetTablesNameList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/GetTablesNameListResponse" message="tns:IDBMSService_GetTablesNameList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CartesianProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBMSService/CartesianProduct" message="tns:IDBMSService_CartesianProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBMSService/CartesianProductResponse" message="tns:IDBMSService_CartesianProduct_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDBMSService" type="tns:IDBMSService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateDatabase">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/CreateDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmptyTableWithName">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/AddEmptyTableWithName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTable">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/AddTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTable">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/GetTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddColumn">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/AddColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRow">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/AddRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeValue">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/ChangeValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRow">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/DeleteRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteColumn">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/DeleteColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTable">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/DeleteTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCurrentDatabase">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/SaveCurrentDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadDatabase">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/LoadDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesNameList">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/GetTablesNameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartesianProduct">
+      <soap:operation soapAction="http://tempuri.org/IDBMSService/CartesianProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBMSService">
+    <wsdl:port name="BasicHttpBinding_IDBMSService" binding="tns:BasicHttpBinding_IDBMSService">
+      <soap:address location="http://localhost:8000/DBMSRemoting/DBMSService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
